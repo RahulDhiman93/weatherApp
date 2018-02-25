@@ -10,16 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var info: NSLayoutConstraint!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+          info.constant -= view.bounds.width
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   var animationPerformedOnce = false
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    
+    if !animationPerformedOnce {
+    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+    self.info.constant += self.view.bounds.width
+    self.view.layoutIfNeeded()
+    }, completion: nil)
+    
+    
+    animationPerformedOnce = true
     }
-
+    
+    }
 
 }
 
