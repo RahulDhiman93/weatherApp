@@ -393,6 +393,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="x00-80-jWJ"/>
                     <connections>
+                        <outlet property="cloud" destination="HnA-ZC-4cC" id="dS4-5o-72k"/>
                         <outlet property="rainy" destination="0LJ-ze-ytF" id="i2h-xb-r2b"/>
                         <outlet property="ssun" destination="Kkc-Kb-65L" id="cW7-Xh-6Yy"/>
                         <outlet property="temp" destination="rR4-PP-JIX" id="dxW-dD-Rf0"/>

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var temp: UILabel!
     @IBOutlet weak var rainy: UIImageView!
     
+    @IBOutlet weak var cloud: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,24 +39,31 @@ class ViewController: UIViewController {
     @IBAction func seasonbtn(_ sender: Any) {
         
         UIView.transition(with: temp,
-                          duration: 1.0,
+                          duration: 2.5,
                           options: .transitionCrossDissolve,
                           animations: { [weak self] in
                             self?.temp.text = String("16℃")
             }, completion: nil)
         
         UIView.transition(with: weatherImg,
-                          duration: 1.0,
+                          duration: 2.5,
                           options: .transitionCrossDissolve,
                           animations: { [weak self] in
                             self?.weatherImg.image = UIImage(named: "rain.jpg")
             }, completion: nil)
         
         UIView.transition(with: rainy,
-                          duration: 2.0,
+                          duration: 3.0,
                           options: .transitionCrossDissolve,
                           animations: { [weak self] in
                             self?.rainy.image = UIImage(named: "raindrop.png")
+            }, completion: nil)
+        
+        UIView.transition(with: cloud,
+                          duration: 3.0,
+                          options: .transitionCrossDissolve,
+                          animations: { [weak self] in
+                            self?.cloud.image = UIImage(named: "rainycloud.png")
             }, completion: nil)
         
         
@@ -81,10 +89,9 @@ class ViewController: UIViewController {
   
     
     func raindrop(){
-        
-        
-        
+   
     }
+        
     
 }
 
