@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="weatherApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -312,36 +312,52 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="dvu-QE-VDc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="477"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0LJ-ze-ytF">
+                                <rect key="frame" x="75" y="152" width="300" height="250"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun-md" translatesAutoresizingMaskIntoConstraints="NO" id="Kkc-Kb-65L">
                                 <rect key="frame" x="55" y="152" width="320" height="320"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="HnA-ZC-4cC">
                                 <rect key="frame" x="0.0" y="325" width="456.66666666666669" height="152"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2DJ-EC-2bk">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="2DJ-EC-2bk">
                                 <rect key="frame" x="16" y="51" width="343" height="69"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26℃" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rR4-PP-JIX">
-                                        <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="69"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="152.66666666666666" height="69"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lineV" translatesAutoresizingMaskIntoConstraints="NO" id="X5p-1c-EIs">
+                                        <rect key="frame" x="152.66666666666666" y="0.0" width="13.666666666666657" height="69"/>
+                                    </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DKX-We-iR5">
-                                        <rect key="frame" x="171.66666666666663" y="0.0" width="171.33333333333337" height="69"/>
+                                        <rect key="frame" x="166.33333333333337" y="0.0" width="176.66666666666663" height="69"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chandigarh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="X1e-dp-2Eq">
-                                                <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="34.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="23"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sector-17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWh-24-fgj">
-                                                <rect key="frame" x="0.0" y="34.666666666666671" width="171.33333333333334" height="34.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="23" width="176.66666666666666" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zK5-Xm-xDd">
+                                                <rect key="frame" x="0.0" y="46" width="176.66666666666666" height="23"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="Season">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="seasonbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ObD-7Q-r1P"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -349,6 +365,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="0LJ-ze-ytF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7Yr-KO-eVf"/>
+                            <constraint firstItem="0LJ-ze-ytF" firstAttribute="top" secondItem="2DJ-EC-2bk" secondAttribute="bottom" constant="32" id="8tD-LZ-MeD"/>
                             <constraint firstItem="5gk-dZ-asm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DK7-Ek-odd"/>
                             <constraint firstItem="HnA-ZC-4cC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="281" id="Iw0-zS-RM7"/>
                             <constraint firstItem="2DJ-EC-2bk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MaA-Pj-KPT"/>
@@ -362,8 +380,10 @@
                             <constraint firstItem="Kkc-Kb-65L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="eXQ-Ed-GVC"/>
                             <constraint firstItem="5gk-dZ-asm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="edd-u7-NWM"/>
                             <constraint firstItem="Kkc-Kb-65L" firstAttribute="top" secondItem="2DJ-EC-2bk" secondAttribute="bottom" constant="32" id="gwB-gF-wes"/>
+                            <constraint firstItem="0LJ-ze-ytF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="iHh-1N-6dF"/>
                             <constraint firstItem="HnA-ZC-4cC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="375:667" id="ilK-NQ-qSl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2DJ-EC-2bk" secondAttribute="trailing" constant="16" id="jRB-o5-O8Q"/>
+                            <constraint firstItem="5gk-dZ-asm" firstAttribute="top" secondItem="0LJ-ze-ytF" secondAttribute="bottom" constant="83" id="poP-29-WDq"/>
                             <constraint firstItem="2DJ-EC-2bk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="u8x-Qp-O8B"/>
                             <constraint firstItem="HnA-ZC-4cC" firstAttribute="leading" secondItem="dvu-QE-VDc" secondAttribute="leading" id="vmW-is-djH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5gk-dZ-asm" secondAttribute="trailing" constant="16" id="wnF-hb-f7u"/>
@@ -371,8 +391,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="x00-80-jWJ"/>
                     <connections>
-                        <outlet property="sun" destination="Kkc-Kb-65L" id="FUg-Nl-lTN"/>
+                        <outlet property="rainy" destination="0LJ-ze-ytF" id="i2h-xb-r2b"/>
+                        <outlet property="ssun" destination="Kkc-Kb-65L" id="cW7-Xh-6Yy"/>
+                        <outlet property="temp" destination="rR4-PP-JIX" id="dxW-dD-Rf0"/>
+                        <outlet property="weatherImg" destination="dvu-QE-VDc" id="56v-7f-q76"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -390,6 +414,7 @@
         <image name="013-wind" width="512" height="512"/>
         <image name="016-sun" width="512" height="512"/>
         <image name="cloud" width="1131" height="510"/>
+        <image name="lineV" width="10" height="1024"/>
         <image name="sun" width="8000" height="4500"/>
         <image name="sun-md" width="298" height="297"/>
     </resources>
