@@ -10,13 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var info: NSLayoutConstraint!
     
+    
+    @IBOutlet weak var sun: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-          info.constant -= view.bounds.width
     }
 
    var animationPerformedOnce = false
@@ -24,16 +24,14 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-    
-    if !animationPerformedOnce {
-    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
-    self.info.constant += self.view.bounds.width
-    self.view.layoutIfNeeded()
-    }, completion: nil)
-    
-    
-    animationPerformedOnce = true
-    }
+        
+        UIView.animate(withDuration: 40) { () -> Void in
+            self.sun.transform = CGAffineTransform(rotationAngle: 360)
+        }
+        
+        UIView.animate(withDuration: 40, delay: 0.15, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
+            self.sun.transform = CGAffineTransform(rotationAngle: 360)
+        }, completion: nil)
     
     }
 
