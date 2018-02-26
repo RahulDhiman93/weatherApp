@@ -12,15 +12,22 @@ class ViewController: UIViewController {
 
     
     @IBOutlet weak var weatherImg: UIImageView!
+    @IBOutlet weak var RC1: UIImageView!
     
+    @IBOutlet weak var pony: UIImageView!
     @IBOutlet weak var ssun: UIImageView!
     @IBOutlet weak var temp: UILabel!
     @IBOutlet weak var rainy: UIImageView!
+    @IBOutlet weak var RC2: UIImageView!
     
     @IBOutlet weak var cloud: UIImageView!
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.RC1.isHidden = true
+        self.RC2.isHidden = true
+        self.pony.isHidden = true
     }
 
    var animationPerformedOnce = false
@@ -28,8 +35,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        
         
         self.sun360(360)
     }
@@ -59,17 +64,41 @@ class ViewController: UIViewController {
                             self?.rainy.image = UIImage(named: "raindrop.png")
             }, completion: nil)
         
-        UIView.transition(with: cloud,
+        /*UIView.transition(with: cloud,
                           duration: 3.0,
                           options: .transitionCrossDissolve,
                           animations: { [weak self] in
                             self?.cloud.image = UIImage(named: "rainycloud.png")
+            }, completion: nil)*/
+        
+        UIView.transition(with: RC1,
+                          duration: 3.0,
+                          options: .transitionCrossDissolve,
+                          animations: { [weak self] in
+                            self?.RC1.isHidden = false
+            }, completion: nil)
+        
+        UIView.transition(with: RC2,
+                          duration: 3.0,
+                          options: .transitionCrossDissolve,
+                          animations: { [weak self] in
+                            self?.RC2.isHidden = false
             }, completion: nil)
         
         
+        UIView.transition(with: ssun,
+                          duration: 2.0,
+                          options: .transitionCrossDissolve,
+                          animations: { [weak self] in
+                            self?.ssun.isHidden = true
+            }, completion: nil)
         
-        self.ssun.isHidden = true
-       
+        UIView.transition(with: pony,
+                          duration: 3.0,
+                          options: .transitionCrossDissolve,
+                          animations: { [weak self] in
+                            self?.pony.isHidden = false
+            }, completion: nil)
        
         
     }
@@ -84,9 +113,6 @@ class ViewController: UIViewController {
         }, completion: nil)
         
     }
-    
-    
-  
     
     func raindrop(){
    
