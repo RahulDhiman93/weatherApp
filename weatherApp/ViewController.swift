@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         self.RC1.isHidden = true
         self.RC2.isHidden = true
         self.pony.isHidden = true
+        
+       
     }
 
    var animationPerformedOnce = false
@@ -37,6 +39,9 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         
         self.sun360(360)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6.0, execute: {
+            self.sun360(360)
+        })
     }
    
     //℃
@@ -45,7 +50,7 @@ class ViewController: UIViewController {
         
         UIView.transition(with: temp,
                           duration: 2.5,
-                          options: .transitionCrossDissolve,
+                          options: .transitionFlipFromBottom,
                           animations: { [weak self] in
                             self?.temp.text = String("16℃")
             }, completion: nil)
@@ -104,11 +109,11 @@ class ViewController: UIViewController {
     }
     
     func sun360(_ Angle:CGFloat){
-        UIView.animate(withDuration: 30) { () -> Void in
+        UIView.animate(withDuration: 50) { () -> Void in
             self.ssun.transform = CGAffineTransform(rotationAngle: Angle)
         }
         
-        UIView.animate(withDuration: 30, delay: 0.15, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
+        UIView.animate(withDuration: 50, delay: 0.15, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
             self.ssun.transform = CGAffineTransform(rotationAngle: Angle)
         }, completion: nil)
         
