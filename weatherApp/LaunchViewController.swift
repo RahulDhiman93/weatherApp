@@ -60,7 +60,7 @@ class LaunchViewController: UIViewController {
             }, completion: nil)
         
         UIView.transition(with: im2,
-                          duration: 2.1,
+                          duration: 2.0,
                           options: .transitionCrossDissolve,
                           animations: { [weak self] in
                             self?.im2.image = UIImage(named: "012-storm.png")
