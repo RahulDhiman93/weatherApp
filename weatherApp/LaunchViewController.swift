@@ -74,7 +74,7 @@ class LaunchViewController: UIViewController {
             }, completion: nil)
         
         UIView.transition(with: im4,
-                          duration: 4.0,
+                          duration: 4.1,
                           options: .transitionCrossDissolve,
                           animations: { [weak self] in
                             self?.im4.image = UIImage(named: "009-wind-1.png")
