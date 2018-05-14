@@ -53,7 +53,7 @@ class LaunchViewController: UIViewController {
         }*/
         
         UIView.transition(with: im1,
-                           duration: 2.0,
+                           duration: 1.0,
                            options: .transitionCrossDissolve,
                            animations: { [weak self] in
                             self?.im1.image = UIImage(named: "016-sun.png")
